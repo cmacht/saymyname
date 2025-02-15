@@ -1,0 +1,53 @@
+[gd_scene load_steps=6 format=3 uid="uid://c3232f0xmt7cu"]
+
+[ext_resource type="Texture2D" uid="uid://cmkqek6m4is6u" path="res://assets/male/body.png" id="1_sppyu"]
+[ext_resource type="Texture2D" uid="uid://cgk2w743tkk35" path="res://persons/walter.jpg" id="2_jnt5h"]
+[ext_resource type="Texture2D" uid="uid://ds4s8uegkoafu" path="res://assets/male/arm.png" id="3_kplk7"]
+[ext_resource type="Texture2D" uid="uid://b2upt12r438ko" path="res://assets/male/leg.png" id="4_ljwbd"]
+[ext_resource type="Texture2D" uid="uid://c7kfss1wlwuwj" path="res://assets/male/hand.png" id="5_4pqu2"]
+
+[node name="Person" type="Node2D"]
+
+[node name="Body" type="Sprite2D" parent="."]
+position = Vector2(1.5, 1.74883)
+texture = ExtResource("1_sppyu")
+metadata/_edit_group_ = true
+
+[node name="Walter" type="Sprite2D" parent="."]
+position = Vector2(9.53674e-07, -80)
+scale = Vector2(0.24409, 0.24409)
+texture = ExtResource("2_jnt5h")
+metadata/_edit_group_ = true
+
+[node name="Arm_Right" type="Sprite2D" parent="."]
+position = Vector2(42.5, 8.74883)
+texture = ExtResource("3_kplk7")
+metadata/_edit_group_ = true
+
+[node name="Leg_Right" type="Sprite2D" parent="."]
+position = Vector2(21.5, 61.7488)
+texture = ExtResource("4_ljwbd")
+metadata/_edit_group_ = true
+
+[node name="Arm_Left" type="Sprite2D" parent="."]
+position = Vector2(-45.5, 7.74883)
+texture = ExtResource("3_kplk7")
+flip_h = true
+metadata/_edit_group_ = true
+
+[node name="Leg_Left" type="Sprite2D" parent="."]
+position = Vector2(-21.5, 61.7488)
+texture = ExtResource("4_ljwbd")
+flip_h = true
+metadata/_edit_group_ = true
+
+[node name="Hand" type="Sprite2D" parent="."]
+position = Vector2(45.5, 43.7488)
+texture = ExtResource("5_4pqu2")
+metadata/_edit_group_ = true
+
+[node name="Hand2" type="Sprite2D" parent="."]
+position = Vector2(-49.5, 44.7488)
+texture = ExtResource("5_4pqu2")
+flip_h = true
+metadata/_edit_group_ = true
