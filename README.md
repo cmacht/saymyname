@@ -25,5 +25,5 @@ A Godot game to help me remember names and faces.
 
 ## Useful
 - YT Tutorial Typing Game by jmbiv: [Part 1](https://www.youtube.com/watch?v=qRPI_c9qI1o), [Part 2](https://www.youtube.com/watch?v=CoLRvfk6tbk), Part 3
-- YT by Queble [Using constructors when instantiating scenes](https://www.youtube.com/watch?v=u9aMR50yjCE)
+- YT by Queble [Using constructors when instantiating scenes](https://www.youtube.com/watch?v=u9aMR50yjCE), but I'm wondering why he isn't using `_init()` - maybe this is the reason: [PackedScenes can only be called with `instantiate()`](https://docs.godotengine.org/en/latest/tutorials/scripting/resources.html#loading-scenes)
 
