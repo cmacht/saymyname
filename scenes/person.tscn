@@ -1,5 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://c3232f0xmt7cu"]
+[gd_scene load_steps=7 format=3 uid="uid://c3232f0xmt7cu"]
 
+[ext_resource type="Script" path="res://scenes/person.gd" id="1_0h2jp"]
 [ext_resource type="Texture2D" uid="uid://cmkqek6m4is6u" path="res://assets/male/body.png" id="1_sppyu"]
 [ext_resource type="Texture2D" uid="uid://cgk2w743tkk35" path="res://persons/walter.jpg" id="2_jnt5h"]
 [ext_resource type="Texture2D" uid="uid://ds4s8uegkoafu" path="res://assets/male/arm.png" id="3_kplk7"]
@@ -7,6 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://c7kfss1wlwuwj" path="res://assets/male/hand.png" id="5_4pqu2"]
 
 [node name="Person" type="Node2D"]
+script = ExtResource("1_0h2jp")
+metadata/_edit_group_ = true
 
 [node name="Body" type="Sprite2D" parent="."]
 position = Vector2(1.5, 1.74883)
