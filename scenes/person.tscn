@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://c3232f0xmt7cu"]
 
-[ext_resource type="Script" path="res://scenes/person.gd" id="1_0h2jp"]
+[ext_resource type="Script" path="res://scripts/person.gd" id="1_0h2jp"]
 [ext_resource type="Texture2D" uid="uid://cmkqek6m4is6u" path="res://assets/male/body.png" id="1_sppyu"]
 [ext_resource type="Texture2D" uid="uid://cgk2w743tkk35" path="res://persons/walter.jpg" id="2_jnt5h"]
 [ext_resource type="Texture2D" uid="uid://ds4s8uegkoafu" path="res://assets/male/arm.png" id="3_kplk7"]
@@ -12,45 +12,58 @@ script = ExtResource("1_0h2jp")
 metadata/_edit_group_ = true
 
 [node name="Body" type="Sprite2D" parent="."]
-position = Vector2(1.5, 1.74883)
+position = Vector2(3.5, 1.85378)
 texture = ExtResource("1_sppyu")
 metadata/_edit_group_ = true
 
 [node name="Walter" type="Sprite2D" parent="."]
-position = Vector2(9.53674e-07, -80)
+position = Vector2(2, -79.8951)
 scale = Vector2(0.24409, 0.24409)
 texture = ExtResource("2_jnt5h")
 metadata/_edit_group_ = true
 
 [node name="Arm_Right" type="Sprite2D" parent="."]
-position = Vector2(42.5, 8.74883)
+position = Vector2(44.5, 8.85378)
 texture = ExtResource("3_kplk7")
 metadata/_edit_group_ = true
 
 [node name="Leg_Right" type="Sprite2D" parent="."]
-position = Vector2(21.5, 61.7488)
+position = Vector2(23.5, 61.8537)
 texture = ExtResource("4_ljwbd")
 metadata/_edit_group_ = true
 
 [node name="Arm_Left" type="Sprite2D" parent="."]
-position = Vector2(-45.5, 7.74883)
+position = Vector2(-43.5, 7.85378)
 texture = ExtResource("3_kplk7")
 flip_h = true
 metadata/_edit_group_ = true
 
 [node name="Leg_Left" type="Sprite2D" parent="."]
-position = Vector2(-21.5, 61.7488)
+position = Vector2(-19.5, 61.8537)
 texture = ExtResource("4_ljwbd")
 flip_h = true
 metadata/_edit_group_ = true
 
 [node name="Hand" type="Sprite2D" parent="."]
-position = Vector2(45.5, 43.7488)
+position = Vector2(47.5, 43.8537)
 texture = ExtResource("5_4pqu2")
 metadata/_edit_group_ = true
 
 [node name="Hand2" type="Sprite2D" parent="."]
-position = Vector2(-49.5, 44.7488)
+position = Vector2(-47.5, 44.8537)
 texture = ExtResource("5_4pqu2")
 flip_h = true
 metadata/_edit_group_ = true
+
+[node name="Visible" type="VisibleOnScreenNotifier2D" parent="."]
+scale = Vector2(6.74911, 9.08889)
+
+[node name="Label" type="Label" parent="."]
+offset_left = -26.0
+offset_top = -187.0
+offset_right = 26.0
+offset_bottom = -164.0
+text = "Walter"
+horizontal_alignment = 1
+
+[connection signal="screen_exited" from="Visible" to="." method="_on_visible_screen_exited"]

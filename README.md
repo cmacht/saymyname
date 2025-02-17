@@ -7,16 +7,17 @@ A Godot game to help me remember names and faces.
 - [ ] Character
     - [ ] set origin (for label)
     - [ ] animate
-    - [ ] move from left to right
-    - [ ] de-spawn & penalty
+    - [x] move from left to right
+    - [x] de-spawn
     - [ ] swap `head` on instantiation
-- [ ] Label
+- [ ] Typing / Label
     - [ ] position correctly with character
     - [ ] style with background (bbcode)
     - [ ] highlight current letter
     - [ ] `_____` -> `wal___`
+    - [ ] penalty if not hit before de-spawn
 - [ ] load local photos and names 
-- [ ] rotate through names
+- [x] rotate through names
 
 ## Optional Todos
 - [ ] time limit

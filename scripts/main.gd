@@ -1,26 +1,35 @@
 extends Node2D
 
 var names := ['skyler', 'jesse', 'hank', 'walter']
+var current_index = 0
+
 var current_input := ''
 var current_letter := ''
 var current_name := ''
 var current_name_index := 0
 
-func get_next_name() -> String:
-	current_name = names.pop_back()
-	update_current_letter()
-	var format_name = "[center]{name}[/center]"
-	return current_name
+
+func _ready() -> void:
+	spawn_next_person()
+	
+func _on_person_exited():
+	spawn_next_person()
+
+func spawn_next_person():
+	if current_index < names.size():
+		var name = names[current_index]
+		var person = Person.new_person(name)
+		add_child(person)
+		person.connect("screen_exited", _on_person_exited)
+		current_index += 1
+	else:
+		get_tree().quit()
+
+
+
 
 func update_current_letter():
 	current_letter = current_name[current_name_index].to_upper()
-	
-
-func _ready() -> void:
-	var person = Person.new()
-	add_child(person)
-	person.position = Vector2(100, 500)
-	# display_name.text = get_next_name().to_upper()
 
 ## Get the player's keyboard input
 func _unhandled_key_input(event: InputEvent) -> void:
