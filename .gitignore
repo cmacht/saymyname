@@ -1,3 +1,7 @@
+assets/photos/*
+!assets/photos/.gitkeep
+
+
 # Godot 4+ specific ignores
 .godot/
 /android/
